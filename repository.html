@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MVNP Research Repository – Full List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f4f7f4;
+      --card: #ffffff;
+      --primary: #176b3f;
+      --primary-light: #e0f1e7;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --border: #d1d5db;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-logos {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-logos img {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      object-fit: contain;
+    }
+
+    .nav-title-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .nav-title {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    .nav-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .nav-links a.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .filters input,
+    .filters select {
+      padding: 0.55rem 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      background: white;
+      font-size: 0.85rem;
+      min-width: 180px;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+      background: var(--card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+
+    thead {
+      background: #e5f3eb;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    th, td {
+      padding: 0.7rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    tbody tr:hover {
+      background: #f9fafb;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-right: 0.25rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .link {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-left">
+      <div class="nav-logos">
+        <img src="assets/DENR Logo.png" alt="DENR Logo">
+        <img src="assets/MVNP Logo.png" alt="MVNP Logo">
+      </div>
+
+      <div class="nav-title-block">
+        <div class="nav-title">MVNP Research Repository</div>
+        <div class="nav-sub">Mahagnao Volcano Natural Park • Official Research Archive</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="repository.html" class="active">Repository</a>
+      <a href="assets/MVNP Research Guidelines-11232025.pdf" target="_blank">Guidelines</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <h1>MVNP Research Repository</h1>
+  <p>Browse all approved studies, theses, legacy publications, and MVNP-PAMB recognized research.</p>
+
+  <div class="filters">
+    <input
+      id="search-input"
+      type="text"
+      placeholder="Search by title, clearance no., or proponent…">
+
+    <select id="filter-type">
+      <option value="">Type of Study</option>
+      <option value="Undergraduate Thesis">Undergraduate Thesis</option>
+      <option value="Master’s Thesis">Master’s Thesis</option>
+      <option value="Doctoral Dissertation">Doctoral Dissertation</option>
+      <option value="Journal Article (Peer-Reviewed)">Journal Article (Peer-Reviewed)</option>
+      <option value="Technical Report">Technical Report</option>
+      <option value="Conference Paper">Conference Paper</option>
+    </select>
+
+    <select id="filter-status">
+      <option value="">MVNP / PAMB Status</option>
+      <option value="Legacy Study (Pre-Guidelines)">Legacy Study (Pre-Guidelines)</option>
+      <option value="Cleared – Non-Invasive">Cleared – Non-Invasive</option>
+      <option value="Cleared – Sampling-Based">Cleared – Sampling-Based</option>
+      <option value="MVNP-PAMB Approved Publication">MVNP-PAMB Approved Publication</option>
+    </select>
+
+    <select id="filter-year">
+      <option value="">Year</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2001">2001</option>
+    </select>
+  </div>
+
+  <div class="table-container">
+    <table id="repo-table">
+      <thead>
+        <tr>
+          <th>Clearance No.</th>
+          <th>Title of Study</th>
+          <th>Type of Study</th>
+          <th>Classification</th>
+          <th>Proponent / Institution</th>
+          <th>Year</th>
+          <th>Remarks</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr
+          data-type="Journal Article (Peer-Reviewed)"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2001">
+          <td class="col-clearance">MVNP-2001-001</td>
+          <td class="col-title">Bathymetry and Hydrobiology of Lake Mahagnao in Leyte</td>
+          <td class="col-type">
+            <span class="tag">Journal Article (Peer-Reviewed)</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Legacy Study (Pre-Guidelines)</span>
+          </td>
+          <td class="col-proponent">Francisco et al., SEAFDEC</td>
+          <td class="col-year">2001</td>
+          <td class="col-remarks">Published in peer-reviewed journal</td>
+          <td>
+            <a
+              href="Repository/Published%20Papers/Francisco%20et%20al_2001_Bathymetry.pdf"
+              class="link"
+              target="_blank">
+              View
+            </a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Technical Report"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2019">
+          <td class="col-clearance">N/A</td>
+          <td class="col-title">Rapid Trail Assessment, Mahagnao Volcano Natural Park</td>
+          <td class="col-type">
+            <span class="tag">Technical Report</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Legacy Study (Pre-Guidelines)</span>
+          </td>
+          <td class="col-proponent">Monterona et al. (2019) / LGU Burauen BEST Project</td>
+          <td class="col-year">2019</td>
+          <td class="col-remarks">No information if published on peer-reviewed journals</td>
+          <td>
+            <a href="#" class="link" target="_blank">View</a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Journal Article (Peer-Reviewed)"
+          data-status="Cleared – Non-Invasive"
+          data-year="2020">
+          <td class="col-clearance">MVNP-2020-003</td>
+          <td class="col-title">Economic Valuation of Ecosystem Services in MVNP</td>
+          <td class="col-type">
+            <span class="tag">Journal Article (Peer-Reviewed)</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Cleared – Non-Invasive</span>
+          </td>
+          <td class="col-proponent">Preciados et al. (2020)</td>
+          <td class="col-year">2020</td>
+          <td class="col-remarks">Published in peer-reviewed journal</td>
+          <td>
+            <a
+              href="Repository/Published%20Papers/Preciados%20et%20al_2020.pdf"
+              class="link"
+              target="_blank">
+              View
+            </a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Undergraduate Thesis"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2022">
+          <td class="col-clearance">N/A</td>
+          <td class="col-title">Plant and Fish Diversity of Lake Mahagnao in Mahagnao Volcano Natural Park</td>
+          <td class="col-type">
+            <span class="tag">Undergraduate Thesis</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Legacy Study (Pre-Guidelines)</span>
+          </td>
+          <td class="col-proponent">No listed proponent</td>
+          <td class="col-year">2022</td>
+          <td class="col-remarks">No information if published on peer-reviewed journals</td>
+          <td>
+            <a href="#" class="link" target="_blank">View</a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Undergraduate Thesis"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2022">
+          <td class="col-clearance">MVNP-PAMB Resolution No. 07, series of 2022</td>
+          <td class="col-title">
+            Diversity of Insects under the Orders Coleoptera and Lepidoptera in Mahagnao Volcano Natural Park, Burauen, Leyte
+          </td>
+          <td class="col-type">
+            <span class="tag">Undergraduate Thesis</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">PAMB Approved</span>
+          </td>
+          <td class="col-proponent">Lumen and Paa (2022) / EVSU Main</td>
+          <td class="col-year">2022</td>
+          <td class="col-remarks">No information if published on peer-reviewed journals</td>
+          <td>
+            <a href="#" class="link" target="_blank">View</a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Master’s Thesis"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2022">
+          <td class="col-clearance">N/A</td>
+          <td class="col-title">
+            Phytochemical, Antimicrobial, and Antioxidant Screening of Select Phytoplankton Species Isolated from Lake Mahagnao, Leyte
+          </td>
+          <td class="col-type">
+            <span class="tag">Master’s Thesis</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Legacy Study (Pre-Guidelines)</span>
+          </td>
+          <td class="col-proponent">Gozo (2022) / University of Sto. Tomas Graduate School</td>
+          <td class="col-year">2022</td>
+          <td class="col-remarks">No information if published on peer-reviewed journals</td>
+          <td>
+            <a href="#" class="link" target="_blank">View</a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Master’s Thesis"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2022">
+          <td class="col-clearance">N/A</td>
+          <td class="col-title">Microalgal Diversity and Limnology of Lake Mahagnao in Eastern Leyte, Philippines</td>
+          <td class="col-type">
+            <span class="tag">Master’s Thesis</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Legacy Study (Pre-Guidelines)</span>
+          </td>
+          <td class="col-proponent">Tantoco (2022) / University of Sto. Tomas Graduate School</td>
+          <td class="col-year">2022</td>
+          <td class="col-remarks">No information if published on peer-reviewed journals</td>
+          <td>
+            <a href="#" class="link" target="_blank">View</a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Undergraduate Thesis"
+          data-status="Legacy Study (Pre-Guidelines)"
+          data-year="2023">
+          <td class="col-clearance">N/A</td>
+          <td class="col-title">
+            Diversity and Distribution of Butterflies (Lepidoptera Rhopalecera) in Different Vegetation Types Found in Mahagnao Volcano Natural Park
+          </td>
+          <td class="col-type">
+            <span class="tag">Undergraduate Thesis</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Legacy Study (Pre-Guidelines)</span>
+          </td>
+          <td class="col-proponent">Capada et al. (2023) / Philippine Science High School</td>
+          <td class="col-year">2023</td>
+          <td class="col-remarks">No information if published on peer-reviewed journals</td>
+          <td>
+            <a href="#" class="link" target="_blank">View</a>
+          </td>
+        </tr>
+
+        <tr
+          data-type="Journal Article (Peer-Reviewed)"
+          data-status="Cleared – Sampling-Based|MVNP-PAMB Approved Publication"
+          data-year="2024">
+          <td class="col-clearance">MVNP-2024-021</td>
+          <td class="col-title">
+            First ecological notes on the Waray Dwarf Burrowing Snake
+            <em>(Levitonius mirus)</em>
+          </td>
+          <td class="col-type">
+            <span class="tag">Journal Article (Peer-Reviewed)</span>
+          </td>
+          <td class="col-status">
+            <span class="tag">Cleared – Sampling-Based</span>
+            <span class="tag">MVNP-PAMB Approved Publication</span>
+          </td>
+          <td class="col-proponent">Modina et al. (2024)</td>
+          <td class="col-year">2024</td>
+          <td class="col-remarks">Published in peer-reviewed journal</td>
+          <td>
+            <a
+              href="Repository/Published%20Papers/Modina%20et%20al_2024.pdf"
+              class="link"
+              target="_blank">
+              View
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Mahagnao Volcano Natural Park – Protected Area Management Office (PAMO). All rights reserved.
+</footer>
+
+<script>
+  (function () {
+    const searchInput = document.getElementById('search-input');
+    const typeFilter = document.getElementById('filter-type');
+    const statusFilter = document.getElementById('filter-status');
+    const yearFilter = document.getElementById('filter-year');
+    const tbody = document.querySelector('#repo-table tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    rows.sort((a, b) => {
+      const yearA = parseInt(a.dataset.year || '0', 10);
+      const yearB = parseInt(b.dataset.year || '0', 10);
+      return yearB - yearA;
+    });
+
+    rows.forEach(row => tbody.appendChild(row));
+
+    function applyFilters() {
+      const search = searchInput.value.toLowerCase().trim();
+      const type = typeFilter.value;
+      const status = statusFilter.value;
+      const year = yearFilter.value;
+
+      rows.forEach(row => {
+        const title = row.querySelector('.col-title').textContent.toLowerCase();
+        const clearance = row.querySelector('.col-clearance').textContent.toLowerCase();
+        const proponent = row.querySelector('.col-proponent').textContent.toLowerCase();
+
+        const rowType = row.dataset.type || '';
+        const rowStatus = row.dataset.status || '';
+        const rowYear = row.dataset.year || '';
+
+        let visible = true;
+
+        if (search) {
+          const combinedText = `${title} ${clearance} ${proponent}`;
+          if (!combinedText.includes(search)) {
+            visible = false;
+          }
+        }
+
+        if (visible && type && rowType !== type) {
+          visible = false;
+        }
+
+        if (visible && status) {
+          if (!rowStatus.split('|').includes(status)) {
+            visible = false;
+          }
+        }
+
+        if (visible && year && rowYear !== year) {
+          visible = false;
+        }
+
+        row.style.display = visible ? '' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    typeFilter.addEventListener('change', applyFilters);
+    statusFilter.addEventListener('change', applyFilters);
+    yearFilter.addEventListener('change', applyFilters);
+  })();
+</script>
+
+</body>
+</html>
